@@ -1,0 +1,15 @@
+<!-- templates/tasks/task_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ task.title }}</title>
+</head>
+<body>
+    <h1>{{ task.title }}</h1>
+    <p>{{ task.description }}</p>
+    <p>Due Date: {{ task.due_date }}</p>
+    <p>Status: {{ task.status }}</p>
+    <!-- Add more task details here                 <a href="{% url 'project_detail' project.id %}">{{ project.name }}</a>
+ -->
+</body>
+</html>

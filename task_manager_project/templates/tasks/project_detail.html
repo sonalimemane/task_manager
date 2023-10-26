@@ -1,0 +1,21 @@
+<!-- templates/project_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ project.name }}</title>
+</head>
+<body>
+    <h1>{{ project.name }}</h1>
+    <p>{{ project.description }}</p>
+
+    <h2>Tasks in {{ project.name }}</h2>
+    <ul>
+        {% for task in project.task_set.all %}
+            <li>
+                <a href="{% url 'task_detail' task.id %}">{{ task.title }}</a>
+                <p>{{ task.description }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
